@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  ocenka-app:
+    build: .
+    container_name: ocenka-app
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - ocenka-db
+    restart: unless-stopped
+
+  ocenka-db:
+    image: postgres:15
+    container_name: ocenka-db
+    environment:
+      POSTGRES_DB: ocenka_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ocenka_pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+
+volumes:
+  ocenka_pgdata:
