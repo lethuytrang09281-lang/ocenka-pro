@@ -1,0 +1,76 @@
+# CLAUDE.md — Оценка Pro (для агентов)
+
+## Проект
+
+Оценка Pro — SaaS-платформа для автоматизации отчётов об оценке имущества.
+Python 3.11, FastAPI (:8001), PostgreSQL (ocenka_db), Vue 3.
+
+## Критические правила
+
+1. БД = `ocenka_db`, user = `postgres`. НЕ `fedresurs_db`.
+2. Порт FastAPI = 8001. Порт 8000 занят другим проектом.
+3. PostgreSQL снаружи на 5433. Порт 5432 занят.
+4. Один файл = одна задача. Не трогай файлы вне ТЗ.
+5. НЕ создавай файлы *_v2.py, *_new.py. Правь оригинал.
+6. После выполнения: `git add -A && git commit -m "тип: описание" && git push`
+7. Не трогай /root/fedr/ — это другой проект.
+
+## Структура
+
+```
+/root/ocenka-pro/
+├── src/
+│   ├── main.py              # FastAPI
+│   ├── database/
+│   │   ├── base.py          # Engine, session
+│   │   └── models.py        # SQLAlchemy модели
+│   ├── modules/             # Бизнес-логика (по дисциплинам)
+│   │   ├── npa/             # НПБ-движок
+│   │   ├── market/          # Рыночный контекст
+│   │   ├── finance/         # Финансовый анализ
+│   │   ├── tax/             # Налоговый калькулятор
+│   │   ├── calc/            # Расчётный движок
+│   │   ├── report/          # Генератор .docx
+│   │   ├── realty/          # Недвижимость
+│   │   └── ...              # Остальные модули
+│   ├── api/                 # FastAPI роуты
+│   ├── services/            # Внешние API
+│   └── utils/
+├── docker-compose.yml
+└── requirements.txt
+```
+
+## Стек
+
+- Python 3.11, FastAPI, SQLAlchemy 2.0, Alembic
+- PostgreSQL 15 (Docker)
+- Type hints обязательны
+- Dataclasses для сущностей оценки
+- Enum для классификаций (типы объектов, виды стоимости)
+
+## Стиль кода
+
+- Type hints везде
+- Docstrings с ссылками на НПА (ФСО, ФЗ, НК) где применимо
+- Никаких `print()` — используй logging
+- Async для внешних API, sync для расчётной логики
+- Тесты: pytest
+
+## Команды
+
+```bash
+# Docker
+cd /root/ocenka-pro
+docker-compose up -d
+docker-compose down && docker-compose build && docker-compose up -d
+docker logs -f ocenka-app
+
+# БД
+docker exec ocenka-db psql -U postgres -d ocenka_db -c "\dt"
+
+# Миграции
+docker exec ocenka-app alembic upgrade head
+
+# Тесты
+docker exec ocenka-app python -m pytest tests/ -v
+```
