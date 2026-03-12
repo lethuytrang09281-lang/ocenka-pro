@@ -9,6 +9,7 @@
 - [x] Модуль ОП.01 (npa): legal_logic.py, compliance.py
 - [x] Модуль ОП.02 (market): market_context.py, compliance.py
 - [x] Модуль ОП.03 (finance): finance_engine.py, compliance.py
+- [x] Модуль ОП.04 (economic_analysis): economic_analysis.py
 
 ## ❌ ЧТО СЛОМАНО
 (пусто — проект новый)
