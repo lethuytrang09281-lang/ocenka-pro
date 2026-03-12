@@ -39,3 +39,10 @@ class InflationCategory(Enum):
     MODERATE = "Умеренная (5-10%)"
     GALLOPING = "Галопирующая (20-200%)"
     HYPER = "Гиперинфляция"
+
+
+class EvaluationApproach(str, Enum):
+    """Подходы к оценке согласно ФСО V (Приказ МЭР №200 от 14.04.2022)"""
+    COST = "Затратный подход"
+    COMPARATIVE = "Сравнительный подход"
+    INCOME = "Доходный подход"
