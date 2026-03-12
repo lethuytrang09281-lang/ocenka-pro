@@ -79,6 +79,16 @@
 
 ## ✅ ЗАВЕРШЕНО
 
+### TASK-013: Размещение модуля ОП.07 (business/investment_analysis)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** ОП.07
+- **Описание:**
+  1. Создать src/modules/business/investment_analysis.py
+  2. Проверка импортов и тестов
+- **Критерий:** `from src.modules.business.investment_analysis import InvestmentAnalyst` работает
+
 ### TASK-012: Размещение модуля ОП.06 (calc/ahp_engine)
 - **Статус:** 🟢 завершено
 - **Дата:** 2026-03-12

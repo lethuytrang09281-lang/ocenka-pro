@@ -12,6 +12,7 @@
 - [x] Модуль ОП.04 (economic_analysis): economic_analysis.py
 - [x] Модуль ОП.05 (tax): calculator.py, compliance.py
 - [x] Модуль ОП.06 (calc): ahp_engine.py (МАИ/AHP)
+- [x] Модуль ОП.07 (business): investment_analysis.py (Марковиц, Шарп, облигации)
 
 ## ❌ ЧТО СЛОМАНО
 (пусто — проект новый)
