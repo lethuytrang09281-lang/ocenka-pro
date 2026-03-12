@@ -15,7 +15,7 @@
 - **Критерий:** `ls /root/ocenka-pro/src/services/` показывает rosreestr_client.py и checko_client.py
 
 ### TASK-002: Docker + FastAPI каркас
-- **Статус:**🟢 завершено
+- **Статус:** 🟢 завершено
 - **Агент:** Claude Code
 - **Фаза:** инфра
 - **Зависит от:** TASK-001
@@ -79,6 +79,27 @@
 
 ## ✅ ЗАВЕРШЕНО
 
+### TASK-011: Размещение модуля ОП.05 (tax)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** ОП.05
+- **Описание:**
+  1. Создать src/modules/tax/calculator.py
+  2. Создать src/modules/tax/compliance.py
+  3. Проверка импортов и тестов
+- **Критерий:** `from src.modules.tax.calculator import TaxCalculator` работает
+
+### TASK-010: Размещение модуля ОП.04 (economic_analysis)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** ОП.04
+- **Описание:**
+  1. Создать src/modules/finance/economic_analysis.py
+  2. Проверка импортов и тестов
+- **Критерий:** `from src.modules.finance.economic_analysis import EconomicAnalysisEngine` работает
+
 ### TASK-009: Размещение модуля ОП.03 (finance)
 - **Статус:** 🟢 завершено
 - **Дата:** 2026-03-12
@@ -90,26 +111,12 @@
   3. Проверка импортов и тестов
 - **Критерий:** `from src.modules.finance.finance_engine import FinanceEngine` работает
 
-TASK-010 выполнена. ✅
-
-Созданные файлы:
-
-Файл	Описание
-src/modules/finance/economic_analysis.py	EconomicAnalysisEngine: 5 методов
-Функции модуля ОП.04:
-
-calculate_current_liquidity() — коэффициент текущей ликвидности (Ктл)
-calculate_financial_leverage() — коэффициент финансового рычага (Кфр)
-calculate_fixed_assets_turnover() — фондоотдача
-calculate_dupont_roe() — трёхфакторная модель Дюпона (ROE)
-calculate_break_even_point() — точка безубыточности
-Проверка:
-
-✅ Импорт работает
-✅ Все 5 тестов прошли (ожидаемые значения совпали)
-✅ Git push выполнен
-Обновлено:
-
-TASKS.md — TASK-010 добавлен в ✅ ЗАВЕРШЕНО
-Claude.md — добавлен ОП.04 в готовые модули
-
+### TASK-003: Схема БД (ядро)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** инфра
+- **Описание:**
+  1. Создать models.py с 8 таблицами
+  2. Alembic миграция применена
+- **Критерий:** `alembic upgrade head` без ошибок, 9 таблиц в БД
