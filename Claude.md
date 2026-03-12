@@ -1,10 +1,11 @@
 # ОЦЕНКА PRO — СОСТОЯНИЕ
 
-## Дата последнего обновления: 2026-03-11
+## Дата последнего обновления: 2026-03-12
 
 ## ✅ ЧТО РАБОТАЕТ
 - [x] Инициализация проекта (TASK-001)
 - [x] Docker + FastAPI каркас (TASK-002)
+- [x] Схема БД: 8 таблиц + Alembic (TASK-003)
 - [x] Модуль ОП.01 (npa): legal_logic.py, compliance.py
 - [x] Модуль ОП.02 (market): market_context.py, compliance.py
 - [x] Модуль ОП.03 (finance): finance_engine.py, compliance.py
