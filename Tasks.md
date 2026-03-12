@@ -74,3 +74,18 @@
 ### TASK-008: Skills / CLAUDE.md для агентов Kilo Code
 - **Фаза:** инфра
 - **Описание:** Файлы конфигурации для Qwen, DeepSeek, Kimi, MiniMax в Kilo Code
+
+---
+
+## ✅ ЗАВЕРШЕНО
+
+### TASK-009: Размещение модуля ОП.03 (finance)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** ОП.03
+- **Описание:**
+  1. Создать src/modules/finance/finance_engine.py
+  2. Создать src/modules/finance/compliance.py
+  3. Проверка импортов и тестов
+- **Критерий:** `from src.modules.finance.finance_engine import FinanceEngine` работает

@@ -3,7 +3,11 @@
 ## Дата последнего обновления: 2026-03-11
 
 ## ✅ ЧТО РАБОТАЕТ
-- [ ] Инициализация проекта (ожидает TASK-001)
+- [x] Инициализация проекта (TASK-001)
+- [x] Docker + FastAPI каркас (TASK-002)
+- [x] Модуль ОП.01 (npa): legal_logic.py, compliance.py
+- [x] Модуль ОП.02 (market): market_context.py, compliance.py
+- [x] Модуль ОП.03 (finance): finance_engine.py, compliance.py
 
 ## ❌ ЧТО СЛОМАНО
 (пусто — проект новый)
@@ -15,7 +19,7 @@ TASK-001: Инициализация проекта на VPS
 TASK-002: Docker (app + db) + FastAPI каркас
 
 ## 📚 ТЕКУЩАЯ ФАЗА
-ОП.01 + ОП.02 — первые 2 дисциплины пройдены, ревью выполено
+ОП.01 + ОП.02 + ОП.03 — первые 3 дисциплины пройдены, модули размещены
 
 ## 📝 ЛОГ РЕШЁННЫХ ПРОБЛЕМ
 (пусто — проект новый)
@@ -29,7 +33,7 @@ VPS:            root@157.22.231.149 (тот же что Fedresurs Pro)
 Проект:         /root/ocenka-pro/
 БД:             ocenka_db (PostgreSQL, user: postgres)
 Docker:         ocenka-app, ocenka-db
-GitHub:         (создать)
+GitHub:         https://github.com/lethuytrang09281-lang/ocenka-pro
 ```
 
 ## 📁 СТРУКТУРА ПРОЕКТА
