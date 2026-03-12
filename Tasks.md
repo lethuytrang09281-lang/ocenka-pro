@@ -79,6 +79,17 @@
 
 ## ✅ ЗАВЕРШЕНО
 
+### TASK-012: Размещение модуля ОП.06 (calc/ahp_engine)
+- **Статус:** 🟢 завершено
+- **Дата:** 2026-03-12
+- **Агент:** Qwen3 Coder
+- **Фаза:** ОП.06
+- **Описание:**
+  1. Добавить EvaluationApproach в src/common/types.py
+  2. Создать src/modules/calc/ahp_engine.py
+  3. Проверка импортов и тестов
+- **Критерий:** `from src.modules.calc.ahp_engine import AHPEngine` работает
+
 ### TASK-011: Размещение модуля ОП.05 (tax)
 - **Статус:** 🟢 завершено
 - **Дата:** 2026-03-12
@@ -120,33 +131,3 @@
   1. Создать models.py с 8 таблицами
   2. Alembic миграция применена
 - **Критерий:** `alembic upgrade head` без ошибок, 9 таблиц в БД
-
-TASK-011 выполнена. ✅
-
-Созданные файлы:
-
-Файл	Описание
-src/modules/tax/calculator.py	TaxCalculator: 4 метода расчёта налогов
-src/modules/tax/compliance.py	TaxCompliance: 3 проверки
-Функции модуля ОП.05:
-
-TaxCalculator:
-
-calculate_vat() — выделение НДС (20%)
-calculate_property_tax() — налог на имущество (2.0% кадастр / 2.2% среднегодовая)
-calculate_land_tax() — земельный налог (0.3% жильё / 1.5% коммерция)
-calculate_income_tax() — налог на прибыль (20%)
-TaxCompliance:
-
-check_economic_justification() — проверка: налог < дохода
-is_tax_agent_required() — статус налогового агента
-calculate_cadastral_challenge_benefit() — выгода от оспаривания кадастра
-Проверка:
-
-✅ Оба импорта работают
-✅ Тесты прошли
-✅ Git push выполнен
-Обновлено:
-
-TASKS.md — TASK-011 добавлен в ✅ ЗАВЕРШЕНО
-Claude.md — добавлен ОП.05 в готовые модули
