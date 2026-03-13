@@ -175,3 +175,37 @@ reconcile() — финальный синтез: согласование 3 по
 
 TASKS.md — TASK-012 добавлен в ✅ ЗАВЕРШЕНО
 Claude.md — добавлен ОП.06 в готовые модули
+
+TASK-013 выполнена. ✅
+
+Созданные файлы:
+
+Файл	Описание
+src/modules/business/investment_analysis.py	InvestmentAnalyst + InvestmentCompliance
+Функции модуля ОП.07:
+
+InvestmentAnalyst:
+
+get_portfolio_return() — ожидаемая доходность портфеля (Марковиц)
+get_portfolio_risk() — риск портфеля (ковариация)
+get_asset_return_sharpe() — доходность по модели Шарпа (α + β × r_m)
+get_bond_price() — цена облигации (PV купонов + PV номинала)
+get_macaulay_duration() — дюрация Маколея
+InvestmentCompliance:
+
+is_capital_investment() — проверка на капитальное вложение (ФЗ-39)
+check_accumulation_positive() — положительное сальдо накопленных потоков
+Результаты тестов:
+
+1. Оценка облигации: 924.18 руб., дюрация 4.28 лет
+2. Доходность портфеля: 16.0%
+3. Комплаенс: "Реконструкция элеватора" — капитальное вложение: True
+Проверка:
+
+✅ Оба импорта работают
+✅ Тесты прошли
+✅ Git push выполнен
+Обновлено:
+
+TASKS.md — TASK-013 добавлен в ✅ ЗАВЕРШЕНО
+Claude.md — добавлен ОП.07 в готовые модули

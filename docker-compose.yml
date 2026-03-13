@@ -23,8 +23,9 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - ocenka_pgdata:/var/lib/postgresql/data
-    ports:
-      - "5433:5432"
+      - ./pg_hba.conf:/etc/postgresql/postgresql.conf.d/pg_hba.conf:ro
+    # Port removed - DB should not be exposed publicly
+    # - "5433:5432"
     restart: unless-stopped
 
 volumes:
